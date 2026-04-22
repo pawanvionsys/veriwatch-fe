@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #0A0C10;
+  --ink2: #111520;
+  --ink3: #161B26;
+  --surface: #1A2030;
+  --surface2: #1E2535;
+  --faint: rgba(255, 255, 255, .07);
+  --faint2: rgba(255, 255, 255, .12);
+  --cyan: #0D9488;
+  --cyan-glow: rgba(13, 148, 136, .15);
+  --cyan-border: rgba(13, 148, 136, .25);
+  --amber: #F59E0B;
+  --amber-glow: rgba(245, 166, 35, .12);
+  --red: #FF4757;
+  --red-glow: rgba(255, 71, 87, .12);
+  --green: #2ED573;
+  --white: #FFFFFF;
+  --off: #D8E0EE;
+  --muted: #6A7A92;
+  --subtle: #3A4558;
+  --font-d: var(--font-barlow-condensed), sans-serif;
+  --font-b: var(--font-ibm-plex-sans), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-ink3: var(--ink3);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-cyan: var(--cyan);
+  --color-amber: var(--amber);
+  --color-red: var(--red);
+  --color-green: var(--green);
+  --color-off: var(--off);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --font-barlow: var(--font-barlow-condensed);
+  --font-ibm: var(--font-ibm-plex-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font-b);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-d);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* --- Section Labels --- */
+.label-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-family: var(--font-d);
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: var(--cyan-glow);
+  border: 1px solid var(--cyan-border);
+  padding: 4px 14px;
+  border-radius: 99px;
+  margin-bottom: 14px;
+}
+
+/* --- Ticker Animation --- */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: scroll 28s linear infinite;
+}
+
+/* --- Hero Animations --- */
+@keyframes blink {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255, 71, 87, .5); }
+  60% { opacity: .5; box-shadow: 0 0 0 5px rgba(255, 71, 87, 0); }
+}
+
+.animate-blink {
+  animation: blink 1.4s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0% { width: 14px; height: 14px; opacity: 1; }
+  100% { width: 48px; height: 48px; opacity: 0; }
+}
+
+.animate-ring {
+  animation: ring 2s ease-out infinite;
+}
+
+/* --- Entry Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInBottom4 {
+  from { transform: translateY(1rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInBottom6 {
+  from { transform: translateY(1.5rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInBottom8 {
+  from { transform: translateY(2rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInBottom10 {
+  from { transform: translateY(2.5rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-in {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fade-in { animation-name: fadeIn; }
+.slide-in-from-bottom-4 { animation-name: slideInBottom4; }
+.slide-in-from-bottom-6 { animation-name: slideInBottom6; }
+.slide-in-from-bottom-8 { animation-name: slideInBottom8; }
+.slide-in-from-bottom-10 { animation-name: slideInBottom10; }
+
+.delay-150 { animation-delay: 150ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* --- New Animations --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.1; transform: scale(1.1); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes scan {
+  from { transform: translateX(-100%) skewX(-12deg); }
+  to { transform: translateX(200%) skewX(-12deg); }
+}
+
+.animate-scan {
+  animation: scan 4s linear infinite;
 }
