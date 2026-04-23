@@ -106,9 +106,9 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan/5 to-transparent w-[50%] h-full -skew-x-12 translate-x-[-100%] animate-[scan_4s_linear_infinite]" />
                   
                   {/* Map Points */}
-                  <div className="absolute top-[30%] left-[40%]">
-                    <div className="w-4 h-4 bg-red rounded-full relative z-10 animate-blink shadow-[0_0_20px_rgba(255,71,87,1)]" />
-                    <div className="w-32 h-32 bg-red/10 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-ring" />
+                  <div className="absolute top-[12%] right-[34.5%]">
+                    <div className="w-4 h-4 bg-[#AB1810] rounded-full relative z-10 animate-blink shadow-[0_0_20px_rgba(255,71,87,1)]" />
+                    <div className="w-32 h-32 bg-[#AB1810] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-ring" />
                   </div>
                   <div className="absolute top-[60%] left-[70%]">
                     <div className="w-3 h-3 bg-cyan rounded-full relative z-10 shadow-[0_0_15px_rgba(13,148,136,1)]" />
