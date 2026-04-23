@@ -130,16 +130,16 @@ const itemVariants: Variants = {
 
 export default function Features() {
   return (
-    <section className="px-6 md:px-[60px] py-16 md:py-[80px]">
+    <section className="px-6 md:px-[60px] py-16 md:py-[20px] md:mt-20">
       <motion.div 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-[60px]"
       >
-        <motion.div variants={itemVariants} id="features" className="text-">Everything in one app</motion.div>
+        <motion.div variants={itemVariants} id="features" className="label-tag">Everything in one app</motion.div>
         <motion.h2 variants={itemVariants} className="font-barlow text-[32px] sm:text-[36px] md:text-[44px] font-extrabold text-white tracking-[-0.8px] leading-[1.15] mb-[14px]">
-          One app. <span className="text-[#0D9488]">Eight intelligence layers.</span>
+          One app. <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan via-[#2dd4bf] to-cyan">Eight intelligence layers.</span>
         </motion.h2>
         <motion.p variants={itemVariants} className="text-[16px] text-[#6A7A92] max-w-[480px] mx-auto">
           The only platform that gives everyday people access to the same real-time data as law enforcement and emergency responders.

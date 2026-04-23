@@ -7,7 +7,7 @@ export default function FinalCTA() {
       
       <div className="label-tag">Ready to know everything?</div>
       <h2 className="font-barlow text-[32px] sm:text-[40px] md:text-[52px] font-extrabold text-white leading-[1.1] tracking-[-1px] mb-[18px]">
-        Your neighbourhood.<br /><span className="text-[#0D9488]">Fully visible.</span> Always free.
+        Your neighbourhood.<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan via-[#2dd4bf] to-cyan">Fully visible.</span> Always free.
       </h2>
       <p className="text-[16px] text-[#6A7A92] mb-10 max-w-lg mx-auto">
         Join 500,000+ Americans who never miss a safety alert. Download VeriWatch in 30 seconds.

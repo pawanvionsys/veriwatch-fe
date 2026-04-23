@@ -21,13 +21,13 @@ export default function Hero() {
       <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between relative z-10">
         {/* Left Content */}
         <div className="flex-1 text-left w-full max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan/10 border border-cyan/20 mb-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan/10 border border-cyan/20 mb-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="flex h-2 w-2 relative">
               <span className=" absolute inline-flex h-full w-full rounded-full bg-cyan opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan"></span>
             </div>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan">Live Safety Intelligence</span>
-          </div>
+          </div> */}
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[0.95] tracking-tight text-white mb-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-150">
           Own Your <br />
@@ -186,9 +186,9 @@ export default function Hero() {
                  <span className="text-[9px] text-muted uppercase">Ready to view</span>
                </div>
              </div>
-             <button className="w-full py-2 rounded-lg bg-cyan/10 border border-cyan/20 text-[10px] font-bold text-cyan uppercase tracking-widest hover:bg-cyan/20 transition-all">
+             <a href="https://veriwatch.io/auth" className="w-full inline-flex items-center justify-center py-2 rounded-lg bg-cyan/10 border border-cyan/20 text-[10px] font-bold text-cyan uppercase tracking-widest hover:bg-cyan/20 transition-all">
                Open Report
-             </button>
+             </a>
           </div>
 
         </div>

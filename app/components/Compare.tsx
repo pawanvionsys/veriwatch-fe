@@ -109,9 +109,9 @@ export default function Compare() {
                   <span className={f.unique ? "text-cyan font-bold" : "text-white"}>{f.veri}</span>
                 </li>
               ))}
-              <li className="text-white font-black text-[24px] h-6 flex items-center pt-8 border-t border-white/[0.05] tracking-tight">
+              {/* <li className="text-white font-black text-[24px] h-6 flex items-center pt-8 border-t border-white/[0.05] tracking-tight">
                 $0.00 <span className="text-[12px] text-muted font-bold ml-2 uppercase tracking-widest">Free Forever</span>
-              </li>
+              </li> */}
             </ul>
             <a href="https://veriwatch.io/auth" className="w-full py-4 rounded-2xl bg-cyan text-ink font-black uppercase tracking-widest text-[12px] hover:scale-[1.02] transition-transform shadow-[0_20px_40px_rgba(13,148,136,0.2)] mt-auto flex items-center justify-center">
               Access All Layers Now
