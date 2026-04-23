@@ -11,7 +11,8 @@ export default function Footer() {
           alt="VeriWatch Logo" 
           width={100} 
           height={24} 
-          className="h-6 w-auto brightness-90 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100"
+          style={{ width: 'auto' }}
+          className="h-6 brightness-90 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100"
         />
       </div>
       <div className='flex gap-[24px] justify-center'>

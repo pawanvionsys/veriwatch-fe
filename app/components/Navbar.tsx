@@ -8,9 +8,10 @@ export default function Navbar() {
         <Image 
           src="https://veriwatch.io/veriwatch-logo.png" 
           alt="VeriWatch Logo" 
-          width={90} 
-          height={90} 
-          className="h-16 w-auto"
+          width={120} 
+          height={32} 
+          style={{ width: 'auto' }}
+          className="h-12 md:h-14 lg:h-16"
           priority
         />
       </a>

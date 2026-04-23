@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function AppPreview() {
   return (
@@ -60,22 +61,45 @@ export default function AppPreview() {
                 <span className="text-[10px]">●●●</span>
               </div>
               
-              <div className="h-[180px] bg-[#111520] mx-3 rounded-[14px] relative overflow-hidden border border-[rgba(255,255,255,0.07)]">
-                {/* Map Grid */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[length:30px_30px]" />
-                
-                <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full bg-[#FF4757]">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full border border-[rgba(255,71,87,0.35)] animate-ring" />
+              <div className="h-[220px] bg-[#0A0C10] mx-3 rounded-[14px] relative overflow-hidden border border-[rgba(255,255,255,0.07)]">
+                {/* Map Image Base */}
+                <div className="absolute inset-0 opacity-60">
+                  <div className="absolute inset-0 bg-[#0A0C10]" />
+                  <Image 
+                    src="/app-image.png" 
+                    alt="Tactical Map" 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 340px"
+                    className="object-cover opacity-80"
+                  />
+                  {/* Grid Overlay */}
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:30px_30px]" />
                 </div>
                 
-                <div className="absolute top-[70%] left-[30%] w-2 h-2 rounded-full bg-[#F5A623]" />
-                <div className="absolute top-[55%] left-[65%] w-[6px] h-[6px] rounded-full bg-[#0D9488]" />
-                
-                <div className="absolute top-3 left-3 bg-[#FF4757]/90 rounded-md px-[10px] py-1 text-[10px] font-bold text-white font-barlow">
-                  ! Active incident
+                {/* Scanner Icons (Teal circular badges with headphones) */}
+                {/* Top Left */}
+                <div className="absolute top-[18%] left-[18%] z-10">
+                  <div className="w-9 h-9 rounded-full bg-cyan/20 border border-cyan/40 backdrop-blur-sm flex items-center justify-center shadow-[0_0_15px_rgba(13,148,136,0.4)] animate-pulse">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                  </div>
+                </div>
+
+                {/* Top Right */}
+                <div className="absolute top-[15%] right-[10%] z-10">
+                  <div className="w-9 h-9 rounded-full bg-cyan/20 border border-cyan/40 backdrop-blur-sm flex items-center justify-center shadow-[0_0_15px_rgba(13,148,136,0.4)] animate-pulse [animation-delay:0.5s]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                  </div>
+                </div>
+
+                {/* Bottom Center-ish */}
+                <div className="absolute bottom-[20%] left-[55%] z-10">
+                  <div className="w-9 h-9 rounded-full bg-cyan/20 border border-cyan/40 backdrop-blur-sm flex items-center justify-center shadow-[0_0_15px_rgba(13,148,136,0.4)] animate-pulse [animation-delay:1s]">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                  </div>
                 </div>
                 
-                <div className="absolute bottom-[10px] right-[10px] bg-[#0A0C10]/85 rounded-md px-2 py-[3px] text-[9px] font-bold text-[#0D9488] font-barlow border border-[rgba(13,148,136,0.25)] flex items-center gap-[5px]">
+                {/* LIVE Label */}
+                <div className="absolute bottom-[10px] right-[10px] bg-[#0A0C10]/85 rounded-md px-2 py-[3px] text-[9px] font-bold text-[#0D9488] font-barlow border border-[rgba(13,148,136,0.25)] flex items-center gap-[5px] z-20">
                   <span className="w-[5px] h-[5px] rounded-full bg-[#FF4757] animate-blink" /> LIVE
                 </div>
               </div>
