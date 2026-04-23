@@ -214,9 +214,9 @@ export default function Features() {
         <p className="text-[#6A7A92] text-sm mb-6 font-medium tracking-wide">Ready to access the ultimate safety toolkit?</p>
         <a 
           href="https://veriwatch.io/auth" 
-          className="inline-flex items-center gap-3 bg-[#0D9488] text-[#0A0C10] text-[15px] font-bold px-10 py-4 rounded-full font-barlow hover:brightness-110 hover:scale-105 transition-all shadow-[0_20px_40px_rgba(13,148,136,0.2)] group"
+          className="inline-flex items-center justify-center gap-3 bg-[#0D9488] text-[#0A0C10] text-[15px] font-bold px-10 py-4 rounded-full font-barlow hover:brightness-110 hover:scale-105 transition-all shadow-[0_20px_40px_rgba(13,148,136,0.2)] group w-full sm:w-auto"
         >
-          Explore All Feature's
+          Explore All Features
           <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
         </a>
       </motion.div>
